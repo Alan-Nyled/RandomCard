@@ -1,0 +1,39 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Træk et kort";
+}
+
+<div class="text-center">
+    <button type="button" id="draw-btn" class="btn btn-success mt-5 mb-3">Træk et kort</button>
+    <p id="result"></p>
+    <img src="" alt="" />
+</div>
+
+<script>
+    let btn = document.getElementById("draw-btn")
+    let p = document.getElementById("result")
+    btn.onclick = getCard
+    function getCard() {
+        fetch("https://localhost:7164/")
+            .then(response => response.json())
+            .then(result => {
+                let value
+                translate[result.value] ? value = translate[result.value] : value = [result.value]
+                p.innerText = `Du trak ${translate[result.type]} ${value}`
+            })
+            .catch(error => console.error('Det gik ikke: ', error));
+    }
+    let ged
+    const translate = {
+        Diamonds: "Ruder",
+        Hearts: "Hjerter",
+        Clubs: "Klør",
+        Spades: "Spar",
+        Joker: "En Joker",
+        Queen: "Dame",
+        King: "Konge",
+        Jack: "Knægt",
+        Ace: "Es"
+    }
+</script>
