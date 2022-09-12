@@ -19,27 +19,23 @@ namespace DrawCard.Services
         static string CardValue(int num)
         {
             if (num > 52) { return string.Empty; }
-            while (num > 13)
+            return (num % 13) switch
             {
-                num -= 13;
-            }
-            return num switch
-            {
-                1 => "Ace",
-                11 => "Jack",
-                12 => "Queen",
-                13 => "King",
-                _ => num.ToString()
+                1 => "Es",
+                11 => "Knægt",
+                12 => "Dame",
+                0 => "Konge",
+                _ => (num % 13).ToString()
             };
         }
         static string CardType(int num)
         {
             return num switch
             {
-                <= 13 => "Hearts",
-                <= 26 => "Clubs",
-                <= 39 => "Diamonds",
-                <= 52 => "Spades",
+                <= 13 => "Hjerter",
+                <= 26 => "Klør",
+                <= 39 => "Ruder",
+                <= 52 => "Spar",
                 _ => "Joker",
             };
         }
@@ -55,6 +51,7 @@ namespace DrawCard.Services
                 Random = num
             });
             Console.WriteLine($"{ card.Type} {card.Value}");
+            Console.WriteLine($"{ num } { num%13} {num/13}");
             return card;
 
         }
