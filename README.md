@@ -4,6 +4,5 @@ En microservice der kan levere et tilfældigt spillekort i JSON, - og en webfron
 
 Mikroservice kan køre alene og testes med Svagger. Alternativt kan det også testes fra websiden. Så start dem begge
 
-![image](https://user-images.githubusercontent.com/100803851/189742294-b6450d2f-5f7b-462d-8436-2d1c589f93d4.png)
+![image](https://user-images.githubusercontent.com/100803851/189742551-4b5eb074-20b6-4ab3-ab1e-958a312f25df.png)
 
-![image](https://user-images.githubusercontent.com/100803851/189642256-a4dbf5bb-a3af-4603-8f61-afe22dba568b.png)
