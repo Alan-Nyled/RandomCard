@@ -12,6 +12,7 @@ const getCard = () => {
             img.src = `images/${value}-${translate[result.type]}.jpg`
         })
         .catch(error => console.error('Det gik ikke: ', error));
+    btn.blur()
 }
 
 const translate = {
