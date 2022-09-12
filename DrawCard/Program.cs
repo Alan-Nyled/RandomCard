@@ -1,5 +1,4 @@
 using DrawCard.Services;
-//var AllowSpecificOrigins = "_AllowSpecificOrigins";
 var builder = WebApplication.CreateBuilder(args);
 
 
