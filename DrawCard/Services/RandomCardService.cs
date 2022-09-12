@@ -51,7 +51,6 @@ namespace DrawCard.Services
                 Random = num
             });
             Console.WriteLine($"{ card.Type} {card.Value}");
-            Console.WriteLine($"{ num } { num%13} {num/13}");
             return card;
 
         }
