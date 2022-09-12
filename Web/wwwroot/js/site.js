@@ -6,25 +6,11 @@ const getCard = () => {
     fetch("https://localhost:7164/")
         .then(response => response.json())
         .then(result => {
-            let value
-            translate[result.value] ? value = translate[result.value] : value = [result.value]
-            text.innerText = `Du trak ${translate[result.type]} ${value}`
-            img.src = `images/${value}-${translate[result.type]}.jpg`
+            text.innerText = `Du trak ${result.type} ${result.value}`
+            img.src = `images/${result.value}-${result.type}.jpg`
         })
         .catch(error => console.error('Det gik ikke: ', error));
     btn.blur()
-}
-
-const translate = {
-    Diamonds: "Ruder",
-    Hearts: "Hjerter",
-    Clubs: "Klør",
-    Spades: "Spar",
-    Joker: "En Joker",
-    Queen: "Dame",
-    King: "Konge",
-    Jack: "Knægt",
-    Ace: "Es"
 }
 
 btn.onclick = getCard
