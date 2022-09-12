@@ -9,7 +9,7 @@ const getCard = () => {
             text.innerText = `Du trak ${result.type} ${result.value}`
             img.src = `images/${result.value}-${result.type}.jpg`
         })
-        .catch(error => console.error('Det gik ikke: ', error));
+        .catch(error => console.error('Det gik ikke efter planen: ', error));
     btn.blur()
 }
 

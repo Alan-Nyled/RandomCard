@@ -1,7 +1,6 @@
 ﻿using DrawCard.Models;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
 
 namespace DrawCard.Services
 {
