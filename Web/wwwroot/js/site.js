@@ -3,7 +3,7 @@ let text = document.getElementById("result")
 let img = document.getElementById("img")
 
 const getCard = () => {
-    fetch("https://localhost:7164/")
+    fetch("https://localhost:7164/and-put-it-back")
         .then(response => response.json())
         .then(result => {
             text.innerText = `Du trak ${result.type} ${result.value}`
