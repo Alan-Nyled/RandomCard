@@ -7,9 +7,8 @@ Det er muligt at trække et kort og tilbagelægge det, plus vælge flere. Altså
 Mikroservice kan køre alene og testes med Svagger. Alternativt kan det også testes fra websiden. Så start dem begge.
 
 
+![image](https://user-images.githubusercontent.com/100803851/190613779-a4b53dcc-9610-4b43-a9d1-6bb10497c458.png)
 
-
-![image](https://user-images.githubusercontent.com/100803851/190613635-997a5bca-632f-42f2-8af4-a7e7e72ee042.png)
 
 
 
