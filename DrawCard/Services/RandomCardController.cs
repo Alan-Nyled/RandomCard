@@ -12,9 +12,9 @@ namespace DrawCard.Services
     public class RandomCardController : ControllerBase
     {
         private readonly IRandomCardService randomCardService;
-        public RandomCardController(IRandomCardService randomCardService)
+        public RandomCardController(IRandomCardService _randomCardService)
         {
-            this.randomCardService = randomCardService;
+            this.randomCardService = _randomCardService;
         }
 
         [HttpGet("/onecard")]
