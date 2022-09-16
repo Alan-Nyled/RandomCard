@@ -2,7 +2,7 @@
 Der er to projekter i samme solution.
 En microservice der kan levere et tilfældigt spillekort i JSON, - og en webfront der henter data fra mikroservicen.
 
-Det er muligt at trække et kort og tilbagelægge det, eller vælge at trække flere. Altså IKKE tilbagelægge.
+Det er muligt at trække et kort og tilbagelægge det, eller vælge at trække flere uden tilbagelægning. (Indtil alle 55 kort er trukket)
 
 Mikroservice kan køre alene og testes med Svagger. Alternativt kan det også testes fra websiden. Så start dem begge.
 
