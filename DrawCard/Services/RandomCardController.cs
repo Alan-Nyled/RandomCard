@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DrawCard.Services
 {
-    
+
     [Route("drawcard")]
     [EnableCors("AllowSpecificOrigins")]
     [ApiController]
@@ -17,19 +17,23 @@ namespace DrawCard.Services
             this.randomCardService = randomCardService;
         }
 
-        [HttpGet("/and-put-it-back")]
+        [HttpGet("/onecard")]
         public Card GetCard()
         {
             return randomCardService.GetRandomCard();
         }
 
-
-
-        [HttpGet("/and-keep-it")]
+        [HttpGet("/multiplecards")]
         public Card GetCardOnce()
         {
-            return randomCardService.GetRandomCardAndKeepIt();
-    }
+            return randomCardService.GetRandomCardMultiple();
+        }
+
+        [HttpGet("/reset")]
+        public void Reset()
+        {
+            randomCardService.ResetList();
+        }
 
     }
 }

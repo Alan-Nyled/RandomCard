@@ -5,13 +5,19 @@ namespace DrawCard.Services
     public interface IRandomCardService
     {
         Card GetRandomCard();
-        Card GetRandomCardAndKeepIt();
+        Card GetRandomCardMultiple();
+        void ResetList();
 
     }
 
     public class RandomCardService : IRandomCardService
     {
         private static List<int> DrawnCards = new();
+
+        public void ResetList()
+        {
+            DrawnCards.Clear();
+        }
 
         static int RandomCard()
         {
@@ -43,6 +49,7 @@ namespace DrawCard.Services
         }
         public Card GetRandomCard()
         {
+            
             int num = RandomCard();
             Card card = new()
             {
@@ -50,22 +57,40 @@ namespace DrawCard.Services
                 Value = CardValue(num),
                 Random = num
             };
-            Console.WriteLine($"{card.Type} {card.Value}");
+           
             return card;
 
         }
-        public Card GetRandomCardAndKeepIt()
+        public Card GetRandomCardMultiple()
         {
             int num = RandomCard();
-            DrawnCards.Add(num);
-            DrawnCards.ForEach(i => Console.Write("{0}\t", i));
+            string type;
+            string value;
+
+            if (DrawnCards.Count < 55)
+            {
+                while (DrawnCards.Contains(num))
+                {
+                    num = RandomCard();
+                }
+
+                DrawnCards.Add(num);
+                type = CardType(num);
+                value = CardValue(num);
+            }
+            else
+            {
+                type = "Ingenting.";
+                value = "Der er ikke flere kort i bunken.";
+                num = 0;
+            }
             Card card = new()
             {
-                Type = "HOLD",
-                Value = "KÆFT",
+                Type = type,
+                Value = value,
                 Random = num
             };
-            Console.WriteLine($"{card.Type} {card.Value}");
+            
             return card;
         }
     }
