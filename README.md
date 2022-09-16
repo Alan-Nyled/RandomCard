@@ -2,9 +2,13 @@
 Der er to projekter i samme solution.
 En microservice der kan levere et tilfældigt spillekort i JSON, - og en webfront der henter data fra mikroservicen.
 
-Mikroservice kan køre alene og testes med Svagger. Alternativt kan det også testes fra websiden. Så start dem begge.
+Det er muligt at trække et kort og tilbagelægge det, eller vælge at trække flere uden tilbagelægning. (Indtil alle 55 kort er trukket)
+
+Mikroservice kan køre alene og testes med Swagger. Alternativt kan det også testes fra websiden. Så start dem begge.
+
+
+![image](https://user-images.githubusercontent.com/100803851/190613779-a4b53dcc-9610-4b43-a9d1-6bb10497c458.png)
 
 
 
-![image](https://user-images.githubusercontent.com/100803851/189742551-4b5eb074-20b6-4ab3-ab1e-958a312f25df.png)
 
