@@ -1,4 +1,6 @@
 # RandomCard
+
+Opgave til SmartLearning.
 Der er to projekter i samme solution.
 En microservice der kan levere et tilfældigt spillekort i JSON, - og en webfront der henter data fra mikroservicen.
 
